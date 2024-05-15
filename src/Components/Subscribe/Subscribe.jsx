@@ -10,7 +10,7 @@ const Subscribe = () => {
     <h3 className="mb-3 text-xl font-medium text-gray-900 dark:text-white">Get more updates...</h3>
     <p className="mb-5 text-sm font-medium text-gray-500 dark:text-gray-300">
         Sign up for our newsletter and you'll be among the first to find out about new
-        features ...............
+        features .........
     </p>
     <form>
         <div data-style="clean" className="flex items-end mb-3">
