@@ -24,13 +24,13 @@ const Update = () => {
             email: user?.email,
             name: user?.displayName
         }
-        axios.patch(`http://localhost:5000/volunteers/${datas._id}`, newData)
+        axios.patch(`https://b9a11-server-side-swart.vercel.app/volunteers/${datas._id}`, newData)
         .then(response => {
         
          if (response.data.modifiedCount === 1) {
-             toast.success('Product updated successfully!');
+             toast.success(' updated successfully!');
          } else {
-             toast.warning('No changes made to the product.');
+             toast.warning('No changes  .');
          }
      
           

@@ -12,7 +12,7 @@ const MyPost = () => {
     const [loading,setLoading]=useState(true)
     useEffect(() => {
         if (user?.email) {
-            axios.get(`http://localhost:5000/volunteer?email=${user?.email}`,{
+            axios.get(`https://b9a11-server-side-swart.vercel.app/volunteer?email=${user?.email}`,{
               headers: {
                 authorize: `Bearer ${token}`
               }
@@ -48,7 +48,7 @@ const MyPost = () => {
         confirmButtonText: "Yes, delete it!"
     }).then((result) => {
         if (result.isConfirmed) {
-            axios.delete(`http://localhost:5000/volunteers/${id}`)
+            axios.delete(`https://b9a11-server-side-swart.vercel.app/volunteers/${id}`)
                 .then(response => {
                     console.log('Response:', response.data);
                     if (response.data.acknowledged && response.data.deletedCount === 1) {

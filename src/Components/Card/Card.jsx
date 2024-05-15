@@ -8,7 +8,7 @@ const Card = () => {
     const [loading,setLoading]=useState(true)
   
     useEffect(()=>{
-        axios.get('http://localhost:5000/volunteers')
+        axios.get('https://b9a11-server-side-swart.vercel.app/volunteers2')
         .then(data=>{
             console.log(data.data)
             setEvent(data.data)
@@ -29,14 +29,14 @@ const Card = () => {
             {
              event?.slice(0,6).map(blogs=>(
                 <div key={blogs._id} className="card  bg-base-100 shadow-xl">
-                <figure><img className='h-[300px]' src={blogs.Thumbnail} alt={blogs.Post_Title}/></figure>
+                <figure><img className='h-[300px]' src={blogs.thumbnail} alt={blogs.post_title}/></figure>
                 <div className="card-body">
-                  <h2 className="card-title">{blogs.Post_Title}</h2>
+                  <h2 className="card-title">{blogs.post_title}</h2>
                   <p>{blogs.short_description}</p>
-                  <p className='font-bold'>Category:{blogs.Category}</p>
+                  <p className='font-bold'>Category:{blogs.category}</p>
                 
                   <div className="card-actions justify-end">
-             <Link to={`/details/${blogs._id}`}><button className="btn btn-primary">View Deatils</button></Link>
+             <Link to={`/details2/${blogs._id}`}><button className="btn btn-primary">View Deatils</button></Link>
                   </div>
                 </div>
               </div>

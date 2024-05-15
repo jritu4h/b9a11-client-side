@@ -12,6 +12,7 @@ import AllData from "../Pages/AllData/AllData";
 import PrivateRoute from "../private/Private";
 import FullDetils from "../Pages/FullDetails/FullDetils";
 import Error from "../Error/Error";
+import FullDetils2 from "../Pages/FullDetails/FullDetils2";
 
 
 
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
             {
               path:'/my-profile/update/:id',
               element:<Update></Update>,
-              loader:({params})=>fetch(`http://localhost:5000/volunteers/${params.id}`)
+              loader:({params})=>fetch(`https://b9a11-server-side-swart.vercel.app/volunteers/${params.id}`)
               
             }
           ]
@@ -57,7 +58,13 @@ const router = createBrowserRouter([
         {
           path:'/details/:id',
           element:<PrivateRoute><FullDetils></FullDetils></PrivateRoute>,
-          loader:({params})=>fetch(`http://localhost:5000/volunteers/${params.id}`)
+          loader:({params})=>fetch(`https://b9a11-server-side-swart.vercel.app/volunteers/${params.id}`)
+          
+        },
+        {
+          path:'/details2/:id',
+          element:<PrivateRoute><FullDetils2></FullDetils2></PrivateRoute>,
+          loader:({params})=>fetch(`https://b9a11-server-side-swart.vercel.app/volunteers2/${params.id}`)
           
         },
         {

@@ -20,7 +20,7 @@ const AddVolunteer = () => {
             email: user?.email,
             name: user?.displayName
         }
-        axios.post('http://localhost:5000/volunteers', newData)
+        axios.post('https://b9a11-server-side-swart.vercel.app/volunteers', newData)
             .then(response => {
                 if (response.status >= 200 && response.status < 300) {
                     console.log('Response:', response.data);

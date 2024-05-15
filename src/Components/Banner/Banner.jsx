@@ -9,10 +9,10 @@ import Banner2 from '../../assets/banner/elissa-garcia-MV1l4f_f1os-unsplash.jpg'
 import Banner3 from '../../assets/banner/roman-synkevych-5wJ2GiYSifA-unsplash.jpg'
 
 const Banner = () => {
-    return (
-        <div className='z-0'>
+  return (
+    <div className='z-0'>
 
-<Swiper
+      <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
@@ -28,6 +28,7 @@ const Banner = () => {
       >
         <SwiperSlide>
           <img src={Banner1} alt="" style={{ width: '100%', height: '500px' }} />
+
         </SwiperSlide>
         <SwiperSlide>
           <img src={Banner2} alt="" style={{ width: '100%', height: '500px' }} />
@@ -36,9 +37,9 @@ const Banner = () => {
           <img src={Banner3} alt="" style={{ width: '100%', height: '500px' }} />
         </SwiperSlide>
       </Swiper>
-            
-        </div>
-    );
+    
+      </div>
+      );
 };
 
-export default Banner;
+      export default Banner;

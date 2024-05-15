@@ -41,7 +41,7 @@ const Provider = ({children}) => {
             console.log(currentUser)
             setUser(currentUser)
            if (currentUser) {
-              axios.post('http://localhost:5000/jwt',{email:currentUser.email})
+              axios.post('https://b9a11-server-side-swart.vercel.app/jwt',{email:currentUser.email})
               .then(data =>{
                 // console.log(data.data.token)
                 localStorage.setItem('web-token', data.data.token)

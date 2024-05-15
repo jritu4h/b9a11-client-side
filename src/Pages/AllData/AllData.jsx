@@ -10,7 +10,7 @@ const AllData = () => {
   
 
   useEffect(() => {
-    axios.get('http://localhost:5000/volunteers')
+    axios.get('https://b9a11-server-side-swart.vercel.app/volunteers')
       .then(data => {
         setEvents(data.data)
         setLoading(false)
@@ -20,7 +20,7 @@ const AllData = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     // Fetch data again and filter by search term
-    axios.get('http://localhost:5000/volunteers')
+    axios.get('https://b9a11-server-side-swart.vercel.app/volunteers')
       .then(data => {
         const filteredEvents = data.data.filter(event => event.Post_Title.toLowerCase().includes(searchTerm.toLowerCase()));
         setEvents(filteredEvents);
